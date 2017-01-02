@@ -1,0 +1,28 @@
+点菜系统通讯协议修正：
+
+1.登录服务器
+	客户机发送：
+	r{"uid":321,"uname":"abcUser","utype":"cyber"}  [智能硬件]
+	r{"uid":654,"uname":"monkey","utype":"app"}    [智能app]
+	r{"uid":654,"uname":"haha","utype":"cyber"}
+2.指定聊天对象
+	客户及发送：
+	c{"form":321,"to":654}
+
+3.两个客户端聊天
+	客户发送
+	l{"from":321,"to":654,"msg":"balabalabalabalabalabalabalabalabala"}
+	l{"from":321,"to":654,"msg":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
+
+
+
+---------------------------------------------------------------------------------
+先注册，再进行消息聊天客户端没有做
+
+r{"uid":321,"uname":"pengpeng","utype":"cyber"}
+r{"uid":654,"uname":"monkey","utype":"app"}
+r{"uid":789,"uname":"xiaopang","utype":"app"}
+	
+l{"from":321,"to":654,"msg":"hello monkey"}
+l{"from":654,"to":789,"msg":"hello xiaopang"}
+l{"from":789,"to":321,"msg":"hello pengpeng"}
